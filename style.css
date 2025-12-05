@@ -284,3 +284,281 @@ section h2 {
     text-align: center;
     font-family: 'Sean Slab', serif;
 }
+
+/* ===== ADMIN PANEL ===== */
+.admin-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 380px;
+    background: white;
+    border: 3px solid var(--granat);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(28,42,77,0.15);
+    z-index: 9999;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-header {
+    background: var(--granat);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.7rem 0.7rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.admin-toggle-btn {
+    background: var(--excel-zielen);
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.admin-toggle-btn:hover {
+    background: var(--stare-zloto);
+}
+
+.admin-content {
+    overflow-y: auto;
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.admin-section {
+    margin-bottom: 1.5rem;
+}
+
+.admin-section h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--granat);
+    font-size: 0.95rem;
+}
+
+.admin-section select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid var(--excel-zielen);
+    border-radius: 0.4rem;
+    font-family: 'Sean Slab', serif;
+    font-size: 0.95rem;
+    color: var(--granat);
+    background: white;
+    cursor: pointer;
+}
+
+.admin-section select:focus {
+    outline: none;
+    border-color: var(--stare-zloto);
+    box-shadow: 0 0 0 3px rgba(194,163,86,0.1);
+}
+
+.tile-editor {
+    background: var(--off-white);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    border: 2px solid var(--excel-zielen);
+}
+
+.tile-editor h4 {
+    margin: 0 0 1rem 0;
+    color: var(--granat);
+}
+
+.tile-editor label {
+    display: block;
+    margin: 1rem 0 0.3rem 0;
+    color: var(--granat);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.tile-editor input[type="text"],
+.tile-editor textarea,
+.tile-editor input[type="file"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid var(--excel-zielen);
+    border-radius: 0.4rem;
+    font-family: 'Sean Slab', serif;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    color: var(--granat);
+}
+
+.tile-editor input[type="text"]:focus,
+.tile-editor textarea:focus,
+.tile-editor input[type="file"]:focus {
+    outline: none;
+    border-color: var(--stare-zloto);
+    box-shadow: 0 0 0 3px rgba(194,163,86,0.1);
+}
+
+.tile-editor textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.tile-preview {
+    margin: 1.2rem 0;
+    padding: 1rem;
+    background: white;
+    border: 2px solid var(--stare-zloto);
+    border-radius: 0.6rem;
+    text-align: center;
+}
+
+.tile-preview img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+    border: 2px solid var(--stare-zloto);
+    background: var(--off-white);
+}
+
+#tile-preview-title {
+    font-weight: bold;
+    color: var(--granat);
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+#tile-preview-desc {
+    color: var(--excel-zielen);
+    font-size: 0.85rem;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 0.8rem;
+    margin: 1.2rem 0 0 0;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Sean Slab', serif;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--excel-zielen);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--granat);
+    box-shadow: 0 4px 12px rgba(33,115,70,0.2);
+}
+
+.btn-secondary {
+    background: var(--stare-zloto);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: var(--granat);
+}
+
+.admin-info {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: white;
+    border: 1px solid var(--excel-zielen);
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--granat);
+}
+
+.admin-info p {
+    margin: 0;
+}
+
+.admin-show-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--excel-zielen);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(33,115,70,0.2);
+    transition: all 0.2s;
+    z-index: 9998;
+}
+
+.admin-show-btn:hover {
+    background: var(--stare-zloto);
+    box-shadow: 0 6px 16px rgba(194,163,86,0.3);
+    transform: scale(1.1);
+}
+
+/* Responsywność panelu admin */
+@media (max-width: 768px) {
+    .admin-panel {
+        width: calc(100vw - 40px);
+        bottom: 10px;
+        right: 20px;
+        left: 20px;
+    }
+
+    .admin-show-btn {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-panel {
+        width: calc(100vw - 20px);
+        bottom: 5px;
+        right: 10px;
+        left: 10px;
+        max-height: 90vh;
+    }
+
+    .admin-header h3 {
+        font-size: 1rem;
+    }
+
+    .tile-preview img {
+        width: 60px;
+        height: 60px;
+    }
+}

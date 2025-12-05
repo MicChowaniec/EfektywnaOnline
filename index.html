@@ -6,6 +6,7 @@
     <title>Efektywna Online</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="tiles-lazy.js"></script>
+    <script defer src="admin-panel.js"></script>
 </head>
 <body>
     <header>
@@ -94,7 +95,68 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Efektywna Online. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; 2025 Efektywna Online. Wszelkie prawa zastrzeżone.</p>
     </footer>
+
+    <!-- Admin Panel -->
+    <div id="admin-panel" class="admin-panel">
+        <div class="admin-header">
+            <h3>Panel Administracyjny</h3>
+            <button id="admin-toggle-btn" class="admin-toggle-btn">Schowaj</button>
+        </div>
+        
+        <div class="admin-content">
+            <div class="admin-section">
+                <h4>Wybierz sekcję:</h4>
+                <select id="section-select">
+                    <option value="">-- Wybierz sekcję --</option>
+                    <option value="o-mnie">O mnie</option>
+                    <option value="uslugi">Usługi</option>
+                    <option value="kontakt">Kontakt</option>
+                </select>
+            </div>
+
+            <div class="admin-section">
+                <h4>Wybierz kafelek:</h4>
+                <select id="tile-select">
+                    <option value="">-- Najpierw wybierz sekcję --</option>
+                </select>
+            </div>
+
+            <div id="tile-editor" class="tile-editor" style="display: none;">
+                <h4>Edytuj kafelek</h4>
+                
+                <label for="tile-title-input">Tytuł:</label>
+                <input type="text" id="tile-title-input" placeholder="Wpisz tytuł kafelka">
+
+                <label for="tile-desc-input">Opis:</label>
+                <textarea id="tile-desc-input" placeholder="Wpisz opis kafelka"></textarea>
+
+                <label for="tile-image-input">Obrazek (URL):</label>
+                <input type="text" id="tile-image-input" placeholder="https://example.com/image.jpg">
+                
+                <label for="tile-image-file">Lub wgraj plik:</label>
+                <input type="file" id="tile-image-file" accept="image/*">
+
+                <div class="tile-preview">
+                    <img id="tile-preview-img" src="" alt="Podgląd">
+                    <div id="tile-preview-title">Tytuł</div>
+                    <div id="tile-preview-desc">Opis</div>
+                </div>
+
+                <div class="admin-buttons">
+                    <button id="save-tile-btn" class="btn-primary">Zapisz zmiany</button>
+                    <button id="reset-tile-btn" class="btn-secondary">Anuluj</button>
+                </div>
+            </div>
+
+            <div class="admin-info">
+                <p><strong>Instrukcja:</strong> Wybierz sekcję, następnie kafelek do edytowania. Zmień tekst lub obrazek i kliknij "Zapisz zmiany".</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Toggle Button (Fixed Position) -->
+    <button id="admin-show-btn" class="admin-show-btn" style="display: none;" title="Pokaż panel admin">⚙️</button>
 </body>
 </html>
