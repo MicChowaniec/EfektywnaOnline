@@ -98,16 +98,48 @@
         <p>&copy; 2025 Efektywna Online. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-modal">
+        <div class="login-container">
+            <h2>Panel Administracyjny</h2>
+            <p>Wpisz hasło aby zalogować się do panelu edycji</p>
+            <input type="password" id="login-password" placeholder="Hasło" autofocus>
+            <button id="login-btn" class="btn-login">Zaloguj</button>
+            <p id="login-error" class="login-error"></p>
+        </div>
+    </div>
+
     <!-- Admin Panel -->
-    <div id="admin-panel" class="admin-panel">
+    <div id="admin-panel" class="admin-panel" style="display: none;">
         <div class="admin-header">
             <h3>Panel Administracyjny</h3>
-            <button id="admin-toggle-btn" class="admin-toggle-btn">Schowaj</button>
+            <div class="admin-header-actions">
+                <button id="logout-btn" class="admin-logout-btn">Wyloguj</button>
+                <button id="admin-toggle-btn" class="admin-toggle-btn">Schowaj</button>
+            </div>
         </div>
         
         <div class="admin-content">
             <div class="admin-section">
-                <h4>Wybierz sekcję:</h4>
+                <h4>📝 Edytuj Logo</h4>
+                <div class="logo-editor">
+                    <img id="logo-preview" src="https://placehold.co/240x240?text=LOGO" alt="Logo" class="logo-preview-img">
+                    
+                    <label for="logo-url-input">URL Obrazka:</label>
+                    <input type="text" id="logo-url-input" placeholder="https://example.com/logo.jpg">
+                    
+                    <label for="logo-file-input">Lub wgraj plik:</label>
+                    <input type="file" id="logo-file-input" accept="image/*">
+                    
+                    <button id="save-logo-btn" class="btn-primary">Zapisz Logo</button>
+                </div>
+            </div>
+
+            <hr class="admin-separator">
+
+            <div class="admin-section">
+                <h4>📌 Edytuj Kafelki</h4>
+            </div>
                 <select id="section-select">
                     <option value="">-- Wybierz sekcję --</option>
                     <option value="o-mnie">O mnie</option>

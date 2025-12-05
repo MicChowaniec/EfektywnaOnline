@@ -286,6 +286,163 @@ section h2 {
 }
 
 /* ===== ADMIN PANEL ===== */
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(28, 42, 77, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.login-modal.hidden {
+    display: none;
+}
+
+.login-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(28, 42, 77, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: var(--granat);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+}
+
+.login-container p {
+    color: var(--excel-zielen);
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+#login-password {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--excel-zielen);
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+#login-password:focus {
+    outline: none;
+    border-color: var(--stare-zloto);
+    box-shadow: 0 0 0 3px rgba(194, 163, 86, 0.1);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--excel-zielen);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-login:hover {
+    background: var(--granat);
+    box-shadow: 0 4px 12px rgba(28, 42, 77, 0.2);
+}
+
+.login-error {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+}
+
+.admin-header-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.admin-logout-btn {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.admin-logout-btn:hover {
+    background: #b71c1c;
+}
+
+.admin-separator {
+    border: none;
+    border-top: 2px solid var(--excel-zielen);
+    margin: 1.2rem 0;
+    opacity: 0.3;
+}
+
+.logo-editor {
+    background: var(--off-white);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    border: 2px solid var(--excel-zielen);
+}
+
+.logo-preview-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--stare-zloto);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-editor label {
+    display: block;
+    margin: 1rem 0 0.3rem 0;
+    color: var(--granat);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.logo-editor input[type="text"],
+.logo-editor input[type="file"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid var(--excel-zielen);
+    border-radius: 0.4rem;
+    font-family: 'Sean Slab', serif;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    color: var(--granat);
+    margin-bottom: 0.8rem;
+}
+
+.logo-editor input[type="text"]:focus,
+.logo-editor input[type="file"]:focus {
+    outline: none;
+    border-color: var(--stare-zloto);
+    box-shadow: 0 0 0 3px rgba(194, 163, 86, 0.1);
+}
+
+#save-logo-btn {
+    width: 100%;
+}
+
 .admin-panel {
     position: fixed;
     bottom: 20px;
@@ -294,7 +451,7 @@ section h2 {
     background: white;
     border: 3px solid var(--granat);
     border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(28,42,77,0.15);
+    box-shadow: 0 8px 32px rgba(28, 42, 77, 0.15);
     z-index: 9999;
     max-height: 85vh;
     display: flex;
